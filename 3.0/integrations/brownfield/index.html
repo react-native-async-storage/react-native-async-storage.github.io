@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://react-native-async-storage.github.io/3.0/contributing/">
+        <link rel="canonical" href="https://react-native-async-storage.github.io/3.0/integrations/brownfield/">
       
       
-        <link rel="prev" href="../faq/">
+        <link rel="prev" href="../jest/">
       
       
-        <link rel="next" href="../changelog/">
+        <link rel="next" href="../../migration-to-3/">
       
       
-      <link rel="icon" href="../assets/logo.png">
+      <link rel="icon" href="../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>Contributing - Async Storage</title>
+        <title>Brownfield integration - Async Storage</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#contributing-to-react-native-async-storage" class="md-skip">
+        <a href="#brownfield-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -89,12 +89,12 @@
             <div class="md-banner__inner md-grid md-typeset">
               
 You're not viewing the latest version.
-<a href="../..">
+<a href="../../..">
   <strong>Click here to go to latest.</strong>
 </a>
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -106,9 +106,9 @@ You're not viewing the latest version.
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Async Storage" class="md-header__button md-logo" aria-label="Async Storage" data-md-component="logo">
+    <a href="../.." title="Async Storage" class="md-header__button md-logo" aria-label="Async Storage" data-md-component="logo">
       
-  <img src="../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -125,7 +125,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contributing
+              Brownfield integration
             
           </span>
         </div>
@@ -215,9 +215,9 @@ You're not viewing the latest version.
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Async Storage" class="md-nav__button md-logo" aria-label="Async Storage" data-md-component="logo">
+    <a href="../.." title="Async Storage" class="md-nav__button md-logo" aria-label="Async Storage" data-md-component="logo">
       
-  <img src="../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     Async Storage
@@ -244,7 +244,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -304,7 +304,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../api/usage/" class="md-nav__link">
+      <a href="../../api/usage/" class="md-nav__link">
         
   
   
@@ -327,7 +327,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../api/db-naming/" class="md-nav__link">
+      <a href="../../api/db-naming/" class="md-nav__link">
         
   
   
@@ -350,7 +350,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../api/errors/" class="md-nav__link">
+      <a href="../../api/errors/" class="md-nav__link">
         
   
   
@@ -373,7 +373,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../api/brownfield/" class="md-nav__link">
+      <a href="../../api/brownfield/" class="md-nav__link">
         
   
   
@@ -400,18 +400,20 @@ You're not viewing the latest version.
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -427,7 +429,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Integrations
@@ -441,7 +443,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../integrations/expo/" class="md-nav__link">
+      <a href="../expo/" class="md-nav__link">
         
   
   
@@ -464,7 +466,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../integrations/jest/" class="md-nav__link">
+      <a href="../jest/" class="md-nav__link">
         
   
   
@@ -484,80 +486,6 @@ You're not viewing the latest version.
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../integrations/brownfield/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Brownfield
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../migration-to-3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Migration to v3
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    FAQ
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -575,7 +503,7 @@ You're not viewing the latest version.
   
   
   <span class="md-ellipsis">
-    Contributing
+    Brownfield
     
   </span>
   
@@ -588,7 +516,7 @@ You're not viewing the latest version.
   
   
   <span class="md-ellipsis">
-    Contributing
+    Brownfield
     
   </span>
   
@@ -611,54 +539,18 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tests" class="md-nav__link">
+  <a href="#android" class="md-nav__link">
     <span class="md-ellipsis">
-      Tests
+      Android
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sending-a-pull-request" class="md-nav__link">
+  <a href="#ios-macos" class="md-nav__link">
     <span class="md-ellipsis">
-      Sending a pull request
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commits-and-versioning" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commits and versioning
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#release-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Release process
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reporting-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reporting issues
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      License
+      iOS / macOS
     </span>
   </a>
   
@@ -671,6 +563,14 @@ You're not viewing the latest version.
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -679,7 +579,73 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../../migration-to-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration to v3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
         
   
   
@@ -721,54 +687,18 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tests" class="md-nav__link">
+  <a href="#android" class="md-nav__link">
     <span class="md-ellipsis">
-      Tests
+      Android
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sending-a-pull-request" class="md-nav__link">
+  <a href="#ios-macos" class="md-nav__link">
     <span class="md-ellipsis">
-      Sending a pull request
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commits-and-versioning" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commits and versioning
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#release-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Release process
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reporting-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reporting issues
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      License
+      iOS / macOS
     </span>
   </a>
   
@@ -793,88 +723,58 @@ You're not viewing the latest version.
   
 
 
-<h1 id="contributing-to-react-native-async-storage">Contributing to React Native Async Storage<a class="headerlink" href="#contributing-to-react-native-async-storage" title="Permanent link">&para;</a></h1>
-<p>Thank you for helping out with Async Storage! We'd like to make contributions as
-pleasant as possible, so here's a small guide of how we see it. Happy to hear
-your feedback about anything, so please let us know.</p>
-<h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
-<p>We use TypeScript for type check, <code>eslint</code> with <code>prettier</code> for linting/formatting. All tests are run on Github Actions
-for all opened pull requests, but you should use them locally
-when
-making changes.</p>
-<ul>
-<li><code>yarn test:lint</code>: Run <code>eslint</code> check.</li>
-<li><code>yarn test:ts</code>: Run <code>tsc</code> type check.</li>
-<li><code>yarn test:format</code>: Run <code>prettier</code> check for formatting mistakes.</li>
-</ul>
-<p>You can also run unit tests for <code>shared-storage</code>, using one of gradle task:</p>
-<ul>
-<li><code>./gradlew testAndroidHostTest</code></li>
-<li><code>./gradlew macosArm64Test</code></li>
-<li><code>./gradlew iosSimulatorArm64Test</code></li>
-</ul>
-<h2 id="sending-a-pull-request">Sending a pull request<a class="headerlink" href="#sending-a-pull-request" title="Permanent link">&para;</a></h2>
-<p>When you're sending a pull request:</p>
-<ul>
-<li>Communication is a key. If you want fix/add something, please open new/find
-  existing issue, so we can discuss it.</li>
-<li>We prefer small pull requests focused on one change, as those are easier to
-  test/check.</li>
-<li>Please make sure that all tests are passing on your local machine.</li>
-<li>Please make sure you've run formatters and linters locally.<ul>
-<li>In VS Code, you can press ⇧+Alt+F or ⇧⌥F to format the current file.<ul>
-<li>To format C++ and Objective-C files, make sure you have the
-  <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">C/C++ extension</a>
-  installed.</li>
-<li>To format JavaScript files, please install
-  <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Prettier extension</a>.</li>
-</ul>
-</li>
-<li>From the command line, you can run <code>yarn format:c</code> and <code>yarn format:js</code> to
-  format C-based languages and JavaScript respectively. The first command
-  requires that you've already installed
-  <a href="https://clang.llvm.org/docs/ClangFormat.html">ClangFormat</a>.</li>
-</ul>
-</li>
-<li>Follow the template when opening a PR.</li>
-</ul>
-<h2 id="commits-and-versioning">Commits and versioning<a class="headerlink" href="#commits-and-versioning" title="Permanent link">&para;</a></h2>
-<p>All PRs are squashed into <code>main</code> branch and wrapped up in a single commit,
-following
-<a href="https://www.conventionalcommits.org/en/v1.0.0-beta.3">conventional commit message</a>.
-Combined with <a href="https://semver.org/">semantic versioning</a>, this allows us to have
-a frequent releases of the library.</p>
-<p><em>Note</em>: We don't force this convention on Pull Requests from contributors, but
-it's a clean way to see what type of changes are made, so feel free to follow
-it.</p>
-<p>Most notably prefixes you'll see:</p>
-<ul>
-<li><strong>fix</strong>: Bug fixes, triggers <em>patch</em> release</li>
-<li><strong>feat</strong>: New feature implemented, triggers <em>minor</em></li>
-<li><strong>chore</strong>: Changes that are not affecting end user (CI config changes,
-  scripts, <a href="https://stackoverflow.com/a/26944812/3510245">"grunt work"</a>)</li>
-<li><strong>docs</strong>: Documentation changes.</li>
-<li><strong>perf</strong>: A code change that improves performance.</li>
-<li><strong>refactor</strong>: A code change that neither fixes a bug nor adds a feature.</li>
-<li><strong>test</strong>: Adding missing tests or correcting existing tests.</li>
-</ul>
-<h2 id="release-process">Release process<a class="headerlink" href="#release-process" title="Permanent link">&para;</a></h2>
-<p>We use <a href="https://github.com/changesets/changesets">Changeset</a> to manage releases.
-In your PR, run <code>yarn changeset</code> to create a new changeset, describing your changes.
-The Changeset Bot will help you out during opening a PR.</p>
-<h2 id="reporting-issues">Reporting issues<a class="headerlink" href="#reporting-issues" title="Permanent link">&para;</a></h2>
-<p>You can report issues on our
-<a href="https://github.com/react-native-async-storage/async-storage/issues">bug tracker</a>.
-Please search for existing issues and follow the issue template when opening a one.</p>
-<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
-<p>By contributing to React Native Async Storage, you agree that your contributions
-will be licensed under the <strong>MIT</strong> license.</p>
+<h1 id="brownfield-integration">Brownfield integration<a class="headerlink" href="#brownfield-integration" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Brownfield integration is supported on <strong>Android</strong>, <strong>iOS</strong>, and <strong>macOS</strong>.</p>
+</div>
+<p><code>AsyncStorage</code> is built on a shared storage layer (<code>SharedStorage</code>) that can also be accessed directly from native
+code.<br />
+This is especially useful in brownfield scenarios, where your app combines React Native and native code, allowing both
+layers to read from and write to the same storage consistently.</p>
+<p>All platforms provide a thread-safe singleton registry called <code>StorageRegistry</code> to manage storage instances.</p>
+<h3 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h3>
+<p>On Android, <code>StorageRegistry</code> is a public singleton, which is used to share <code>SharedStorage</code> instances with the native module.
+Multiple calls with the same name return the same singleton instance, ensuring consistent access.</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">android.content.Context</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlinx.coroutines.runBlocking</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">org.asyncstorage.shared_storage.Entry</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">org.asyncstorage.shared_storage.SharedStorage</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">import</span><span class="w"> </span><span class="nn">org.asyncstorage.storage.StorageRegistry</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// access shared storage via StorageRegistry</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">storage</span><span class="p">:</span><span class="w"> </span><span class="n">SharedStorage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StorageRegistry</span><span class="p">.</span><span class="na">getStorage</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;my-users&quot;</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">// runBlocking only for a demonstration</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">runBlocking</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="n">storage</span><span class="p">.</span><span class="na">setValues</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="n">Entry</span><span class="p">(</span><span class="s">&quot;email&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;john@example.com&quot;</span><span class="p">)))</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">storage</span><span class="p">.</span><span class="na">getValues</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;email&quot;</span><span class="p">))</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Stored email: </span><span class="si">${</span><span class="n">values</span><span class="p">.</span><span class="na">firstOrNull</span><span class="p">()</span><span class="o">?.</span><span class="na">value</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="ios-macos">iOS / macOS<a class="headerlink" href="#ios-macos" title="Permanent link">&para;</a></h3>
+<p>On iOS and macOS, the <code>StorageRegistry</code> singleton provides the same functionality in Swift and Objective-C.</p>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">import</span><span class="w"> </span><span class="nc">AsyncStorage</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">import</span><span class="w"> </span><span class="nc">SharedAsyncStorage</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// access shared storage via StorageRegistry</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kd">let</span><span class="w"> </span><span class="nv">storage</span><span class="p">:</span><span class="w"> </span><span class="n">SharedStorage</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">StorageRegistry</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">getStorage</span><span class="p">(</span><span class="n">dbName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-users&quot;</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">storage</span><span class="p">.</span><span class="n">setValues</span><span class="p">([</span><span class="n">Entry</span><span class="p">(</span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;email&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;john@example.com&quot;</span><span class="p">)])</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nv">values</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">storage</span><span class="p">.</span><span class="n">getValues</span><span class="p">(</span><span class="n">keys</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;email&quot;</span><span class="p">])</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="bp">print</span><span class="p">(</span><span class="s">&quot;Stored email: </span><span class="si">\(</span><span class="n">values</span><span class="p">.</span><span class="bp">first</span><span class="p">?.</span><span class="n">value</span><span class="w"> </span><span class="p">??</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
+</span></code></pre></div>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -930,10 +830,10 @@ will be licensed under the <strong>MIT</strong> license.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
