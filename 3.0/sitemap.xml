@@ -2,50 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/changelog/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/contributing/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/faq/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/migration-to-3/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/api/brownfield/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/api/db-naming/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/api/errors/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/api/usage/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/integrations/brownfield/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/integrations/expo/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
          <loc>https://react-native-async-storage.github.io/3.0/integrations/jest/</loc>
-         <lastmod>2026-03-21</lastmod>
+         <lastmod>2026-03-26</lastmod>
     </url>
 </urlset>
