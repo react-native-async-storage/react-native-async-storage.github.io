@@ -986,10 +986,10 @@ You're not viewing the latest version.
 <h3 id="asyncstorage-is-now-instance-based"><code>AsyncStorage</code> is now instance-based<a class="headerlink" href="#asyncstorage-is-now-instance-based" title="Permanent link">&para;</a></h3>
 <p>In v3, AsyncStorage is no longer a singleton.<br />
 Each instance represents an <strong>isolated storage area</strong>, providing separation between data sets. Head over to the <a href="../api/usage/#creating-a-storage">Usage page</a> to learn more.</p>
-<p><code>typescript
-// create separate storages
-const userStorage = createAsyncStorage("user");
-const cacheStorage = createAsyncStorage("cache");</code></p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// create separate storages</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">userStorage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createAsyncStorage</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">);</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">cacheStorage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createAsyncStorage</span><span class="p">(</span><span class="s2">&quot;cache&quot;</span><span class="p">);</span>
+</span></code></pre></div>
 <h3 id="default-export-still-points-to-v2-storage">Default export still points to v2 storage<a class="headerlink" href="#default-export-still-points-to-v2-storage" title="Permanent link">&para;</a></h3>
 <p>To make upgrading smoother, the default export continues to reference the v2 implementation.
 This ensures that:</p>
@@ -997,10 +997,10 @@ This ensures that:</p>
 <li>Your app can continue to access previously stored data.</li>
 <li>You can migrate incrementally to v3 instances.</li>
 </ul>
-<p><code>typescript
-// Still works (uses the v2 backend)
-import AsyncStorage from "@react-native-async-storage/async-storage";
-await AsyncStorage.setItem("foo", "bar");</code></p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Still works (uses the v2 backend)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">AsyncStorage</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@react-native-async-storage/async-storage&quot;</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">await</span><span class="w"> </span><span class="nx">AsyncStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">);</span>
+</span></code></pre></div>
 <h3 id="callbacks-removed-promises-only">Callbacks removed - Promises only<a class="headerlink" href="#callbacks-removed-promises-only" title="Permanent link">&para;</a></h3>
 <p>All methods are now promise-based.
 The old callback arguments have been removed to make the API simpler and more consistent.</p>
@@ -1011,15 +1011,15 @@ Rather than enforcing a platform-specific merging strategy, the merge API has be
 <p>The <code>useAsyncStorage</code> hook has been removed due to implementation issues.<br />
 It will be reintroduced in a future release with an improved design.</p>
 <p>If you need it, here's the old version:</p>
-<p><code>typescript
-export function useAsyncStorage(key: string): AsyncStorageHook {
-  return {
-    getItem: (...args) =&gt; AsyncStorage.getItem(key, ...args),
-    setItem: (...args) =&gt; AsyncStorage.setItem(key, ...args),
-    mergeItem: (...args) =&gt; AsyncStorage.mergeItem(key, ...args),
-    removeItem: (...args) =&gt; AsyncStorage.removeItem(key, ...args),
-  };
-}</code></p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">useAsyncStorage</span><span class="p">(</span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">AsyncStorageHook</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nx">getItem</span><span class="o">:</span><span class="w"> </span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">AsyncStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">args</span><span class="p">),</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nx">setItem</span><span class="o">:</span><span class="w"> </span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">AsyncStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">args</span><span class="p">),</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nx">mergeItem</span><span class="o">:</span><span class="w"> </span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">AsyncStorage</span><span class="p">.</span><span class="nx">mergeItem</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">args</span><span class="p">),</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nx">removeItem</span><span class="o">:</span><span class="w"> </span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">AsyncStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">args</span><span class="p">),</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p">};</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
+</span></code></pre></div>
 <h3 id="errors-are-more-predictable-now">Errors are more predictable now<a class="headerlink" href="#errors-are-more-predictable-now" title="Permanent link">&para;</a></h3>
 <p>All errors thrown by <code>AsyncStorage</code> are now instances of <code>AsyncStorageError</code>, each containing a <code>type</code> property that indicates the kind of error.
 For more details, head over to the <a href="../api/errors/">Errors page</a>.</p>
@@ -1035,37 +1035,31 @@ For more details, head over to the <a href="../api/errors/">Errors page</a>.</p>
 <p>retain their signatures as in v2, ensuring backward compatibility.</p>
 <h4 id="multiget">multiGet<a class="headerlink" href="#multiget" title="Permanent link">&para;</a></h4>
 <p>Renamed to <code>getMany</code>, this method returns a <code>Record&lt;string, string | null&gt;</code> and follows a "what you request is what you get" rule: every key provided in the request appears in the returned object, with <code>null</code> for keys that don’t exist, or have <code>null</code> value, in storage.</p>
-<p>```diff
--  multiGet: (
--    keys: readonly string[],
--    callback?: MultiGetCallback
--  ) =&gt; Promise<readonly KeyValuePair[]>;</p>
-<ul>
-<li>getMany(keys: string[]): Promise<Record\<string, string | null>>;
-```</li>
-</ul>
+<div class="language-diff highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gd">-  multiGet: (</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="gd">-    keys: readonly string[],</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="gd">-    callback?: MultiGetCallback</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="gd">-  ) =&gt; Promise&lt;readonly KeyValuePair[]&gt;;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="gi">+ getMany(keys: string[]): Promise&lt;Record&lt;string, string | null&gt;&gt;;</span>
+</span></code></pre></div>
 <h4 id="multiset">multiSet<a class="headerlink" href="#multiset" title="Permanent link">&para;</a></h4>
 <p>Renamed to <code>setMany</code>, this method accepts a <code>Record&lt;string, string&gt;</code> containing key-value pairs.</p>
-<p>```diff
--  multiSet: (
--    keyValuePairs: ReadonlyArray<readonly [string, string]>,
--    callback?: MultiCallback
--  ) =&gt; Promise<void>;</p>
-<ul>
-<li>setMany(entries: Record<string, string>): Promise<void>;
-```</li>
-</ul>
+<div class="language-diff highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gd">-  multiSet: (</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="gd">-    keyValuePairs: ReadonlyArray&lt;readonly [string, string]&gt;,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="gd">-    callback?: MultiCallback</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="gd">-  ) =&gt; Promise&lt;void&gt;;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="gi">+ setMany(entries: Record&lt;string, string&gt;): Promise&lt;void&gt;;</span>
+</span></code></pre></div>
 <h4 id="multiremove">multiRemove<a class="headerlink" href="#multiremove" title="Permanent link">&para;</a></h4>
 <p>Renamed to <code>removeMany</code>, this method accepts a list of keys to remove.</p>
-<p>```diff
--  multiRemove: (
--    keys: readonly string[],
--    callback?: MultiCallback
--  ) =&gt; Promise<void>;</p>
-<ul>
-<li>removeMany(keys: string[]): Promise<void>;
-```</li>
-</ul>
+<div class="language-diff highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gd">-  multiRemove: (</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="gd">-    keys: readonly string[],</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="gd">-    callback?: MultiCallback</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="gd">-  ) =&gt; Promise&lt;void&gt;;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="gi">+ removeMany(keys: string[]): Promise&lt;void&gt;;</span>
+</span></code></pre></div>
 
 
 

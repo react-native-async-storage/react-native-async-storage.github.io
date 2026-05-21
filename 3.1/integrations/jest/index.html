@@ -797,34 +797,35 @@ tests.</p>
 <h3 id="transform-configuration">Transform configuration<a class="headerlink" href="#transform-configuration" title="Permanent link">&para;</a></h3>
 <p>The package ships as ESM source, so Jest must be configured to transform it. Add it to the <code>transformIgnorePatterns</code> in
 your Jest config:</p>
-<p><code>js
-transformIgnorePatterns: [
-    'node_modules/(?!@react-native-async-storage/)',
-],</code></p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">transformIgnorePatterns</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="s1">&#39;node_modules/(?!@react-native-async-storage/)&#39;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">],</span>
+</span></code></pre></div>
 <h3 id="automatic-mock-file">Automatic mock file<a class="headerlink" href="#automatic-mock-file" title="Permanent link">&para;</a></h3>
 <p>Create a manual mock file that Jest will pick up automatically for every test:</p>
-<p><code>__mocks__/@react-native-async-storage/async-storage.js</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>__mocks__/@react-native-async-storage/async-storage.js
+</span></code></pre></div>
 <p>With content:</p>
-<p><code>js
-module.exports = require("@react-native-async-storage/async-storage/jest");</code></p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;@react-native-async-storage/async-storage/jest&quot;</span><span class="p">);</span>
+</span></code></pre></div>
 <p>Jest resolves files under <code>__mocks__/</code> automatically when the module is imported, so no additional configuration is
 needed.</p>
 <h3 id="inline-mock">Inline mock<a class="headerlink" href="#inline-mock" title="Permanent link">&para;</a></h3>
 <p>To mock the module for a specific test file, call <code>jest.mock</code> at the top of the file:</p>
-<p><code>js
-jest.mock("@react-native-async-storage/async-storage", () =&gt;
-  require("@react-native-async-storage/async-storage/jest")
-);</code></p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">jest</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="s2">&quot;@react-native-async-storage/async-storage&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;@react-native-async-storage/async-storage/jest&quot;</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">);</span>
+</span></code></pre></div>
 <h2 id="what-the-mock-provides">What the mock provides<a class="headerlink" href="#what-the-mock-provides" title="Permanent link">&para;</a></h2>
 <p>The mock is a full in-memory implementation of the <code>AsyncStorage</code> interface. Additionally, it exports
 <code>clearAllMockStorages</code> to clear all in-memory storages.
 Example usage:</p>
-<p>```ts
-import { clearAllMockStorages } from "@react-native-async-storage/async-storage/jest";</p>
-<p>beforeEach(() =&gt; {
-  clearAllMockStorages();
-});
-```</p>
+<div class="language-ts highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">clearAllMockStorages</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@react-native-async-storage/async-storage/jest&quot;</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nx">beforeEach</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nx">clearAllMockStorages</span><span class="p">();</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">});</span>
+</span></code></pre></div>
 
 
 

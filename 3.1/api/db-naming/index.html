@@ -794,42 +794,42 @@ This ensures that each storage instance is scoped by name and prevents data from
 The <code>databaseName</code> is normalized into a file path with the <code>.sqlite</code> extension, and each <code>databaseName</code> creates its own
 subdirectory inside <code>async-storage/databases</code>.</p>
 <p>Directory:</p>
-<p><code>text
-&lt;Application Support&gt;/async-storage/databases/&lt;databaseName&gt;/</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;Application Support&gt;/async-storage/databases/&lt;databaseName&gt;/
+</span></code></pre></div>
 <p>File:</p>
-<p><code>text
-&lt;Application Support&gt;/async-storage/databases/&lt;databaseName&gt;/&lt;databaseName&gt;.sqlite</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;Application Support&gt;/async-storage/databases/&lt;databaseName&gt;/&lt;databaseName&gt;.sqlite
+</span></code></pre></div>
 <p>Example:</p>
-<p><code>``typescript
-const userId = "1234";
-createAsyncStorage(</code>user-${userId}`);</p>
-<p>// creates:
-// <Application Support>/async-storage/databases/user-1234/user-1234.sqlite
-```</p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">userId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;1234&quot;</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nx">createAsyncStorage</span><span class="p">(</span><span class="sb">`user-</span><span class="si">${</span><span class="nx">userId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">// creates:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">// &lt;Application Support&gt;/async-storage/databases/user-1234/user-1234.sqlite</span>
+</span></code></pre></div>
 <h3 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h3>
 <p>On Android, databases are stored in the app’s internal files directory.<br />
 The <code>databaseName</code> is normalized into a file path with the <code>.sqlite</code> extension, and each <code>databaseName</code> creates its own
 subdirectory inside <code>async-storage/databases</code>.</p>
 <p>Directory:</p>
-<p><code>text
-&lt;App Files Dir&gt;/async-storage/databases/&lt;databaseName&gt;/</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;App Files Dir&gt;/async-storage/databases/&lt;databaseName&gt;/
+</span></code></pre></div>
 <p>File:</p>
-<p><code>text
-&lt;App Files Dir&gt;/async-storage/databases/&lt;databaseName&gt;/&lt;databaseName&gt;.sqlite</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;App Files Dir&gt;/async-storage/databases/&lt;databaseName&gt;/&lt;databaseName&gt;.sqlite
+</span></code></pre></div>
 <p>Example:</p>
-<p><code>``typescript
-const userId = "1234";
-createAsyncStorage(</code>user-${userId}`);</p>
-<p>// creates:
-// <App Files Dir>/async-storage/databases/user-1234/user-1234.sqlite
-```</p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">userId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;1234&quot;</span><span class="p">;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">createAsyncStorage</span><span class="p">(</span><span class="sb">`user-</span><span class="si">${</span><span class="nx">userId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1">// creates:</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">// &lt;App Files Dir&gt;/async-storage/databases/user-1234/user-1234.sqlite</span>
+</span></code></pre></div>
 <h3 id="web">Web<a class="headerlink" href="#web" title="Permanent link">&para;</a></h3>
 <p>On the Web, <code>databaseName</code> corresponds directly to the name of the IndexedDB database.<br />
 Although the <code>async-storage</code> grouping is abstracted away, the name remains unique across instances.</p>
 <p>Example:</p>
-<p><code>typescript
-const userId = "1234";
-createAsyncStorage(`user-${userId}`);</code></p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">userId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;1234&quot;</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nx">createAsyncStorage</span><span class="p">(</span><span class="sb">`user-</span><span class="si">${</span><span class="nx">userId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></code></pre></div>
 <p>Creates database named <code>user-1234</code>:</p>
 <p><img alt="web-db-naming-1.png" src="../../assets/db-naming-web-1.png" /></p>
 <h3 id="windows-and-visionos">Windows and visionOS<a class="headerlink" href="#windows-and-visionos" title="Permanent link">&para;</a></h3>
